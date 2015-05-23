@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Entire script has been divided into 9 parts</title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+
+
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+pre {
+  overflow-x: auto;
+}
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<h5>Entire script has been divided into 9 parts</h5>
+
+<ol>
+<li><p>After reading the data in xtrain and ytrain this step combines them to make a single data set called compl_train which is short for complete training data.</p></li>
+<li><p>Same process for test data set too which produces compl_test data set.</p></li>
+<li><p>Merged the training and testing data set to make a complete dataset named wholeData.</p></li>
+<li><p>Reading the feature.txt file to extract the information related to column names.</p></li>
+<li><p>Subsetting the feature data set to extract the entires that contain &ldquo;mean&rdquo; and &ldquo;std&rdquo; phrases. 
+So that they can be used to analyze the mean and std measurements of the main data set.
+total data frame combines the mean and std data frames in a single data frame for further uses.</p></li>
+<li><p>Total Index gives the indices of the rows that have &ldquo;mean&rdquo; and &ldquo;std&rdquo; in their discription</p></li>
+<li><p>Based on total Index wholeData is subsetted to extract all the entries related to mean and std and a new dataframe is formed useWholeData. Besides last column of the wholeData has also been included that contains the activity code. Last column of useWholeData which contains the Active_Code has been converted to &ldquo;factor&rdquo; for further uses.</p></li>
+<li><p>In this step all the columns of the final dataset i.e. useWholeData has been renamed according to their discription. For further information refer to the CookBook.Rmd </p></li>
+<li><p>This part contains the required averages of the measurements.
+averageMeas_Activity denotes average of all the activites for that Activity Code and
+averageMeans_Act1 to averageMeans_Act6 denote the averages of different activites for all the 6 Activity Codes.</p></li>
+</ol>
+
+</body>
+
+</html>
